@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>starbucks</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+    <div class="container">
+        <div class="circle"></div>
+        <div class="head">
+            <img class="logo" src="./img/starbuckslogo-png_97964.png" alt="" width="50px">
+            <ul class="headers">
+                <li><a href="#" class="active">Home</a></li>
+                <li><a href="#">Menu</a></li>
+                <li><a href="#">Whats New</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div>
+        <div class="content">
+            <div class="info">
+            <h2>its not just coffee <br>its <span>Starbucks</span></h2>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cupiditate sit iure eligendi laboriosam suscipit saepe. Amet iusto voluptates quidem dignissimos aperiam et suscipit deserunt fuga, pariatur esse sit! Dignissimos, excepturi.</p>
+            <a href="#">LEARN MORE</a>
+            </div>
+            <div class="imgbox">
+                <img src="./img/img1.png" class="starbucks" alt="">
+            </div>
+        </div>
+        <ul class="thumb">
+            <li><img src="./img/img1.png" alt="" width="50px" onclick="imgSlider('./img/img1.png');changeColor('#017143')"></li>
+            <li><img src="./img/img2.png" alt="" width="50px" onclick="imgSlider('./img/img2.png');changeColor('#eb7495')"></li>
+            <li><img src="./img/img3.png" alt="" width="50px" onclick="imgSlider('./img/img3.png');changeColor('#d752b1')"></li>
+        </ul>
+        <ul class="sci">
+            <li><a href="#"><img src="./img/facebook.png" alt="" width="30"></a></li>
+            <li><a href="#"><img src="./img/twitter.png" alt="" width="30"></a></li>
+            <li><a href="#"><img src="./img/instagram.png" alt="" width="30"></a></li>
+        </ul>
+    </div>
+
+    <script type="text/javascript">
+        function imgSlider(image){
+            document.querySelector(".starbucks").src = image
+            if(document.querySelector(".imgbox img").getAttribute("src") == './img/img3.png'){
+                document.querySelector(".imgbox img").style.width="300px"
+                document.querySelector(".imgbox img").style.margin = "-65px 0 0"
+            }
+        }
+        function changeColor(color){
+            let circle = document.querySelector(".circle")
+            circle.style.background = color
+        }
+    </script>
+    
+</body>
+</html>
